@@ -1,0 +1,1510 @@
+Command: /home/peky/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/peky/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/peky/repos/esp32_learning/i2c_oled/build/i2c_oled.elf /home/peky/repos/esp32_learning/i2c_oled/build/bootloader/bootloader.elf -m '/home/peky/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/peky/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c73c vaddr=40080000 size=038dch ( 14556) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=175a4h ( 95652) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000375cc vaddr=400838dc size=0a0ach ( 41132) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041680 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     i2c_oled[0m
+[0;32mI (193) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (198) app_init: Compile time:     Sep 14 2025 02:08:45[0m
+[0;32mI (203) app_init: ELF file SHA256:  8a2c3ad80...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BA8 len 0002D458 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D988 len 00012678 (73 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;32mI (295) i2c_oled: Init I2C SDA=21 SCL=22 @100kHz[0m
+[1;31mE (295) lcd_panel.io.i2c: esp_lcd_new_panel_io_i2c_v2(60): D/C bit exceeds control bytes[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d3d2f
+file: "./main/i2c_oled_example_main.c" line 58
+func: app_main
+expression: esp_lcd_new_panel_io_i2c(i2c_bus, &io_cfg, &io)
+
+abort() was called at PC 0x40085157 on core 0
+
+
+Backtrace: 0x400851fd:0x3ffb3d20 0x400851c5:0x3ffb3d40 0x4008b3d1:0x3ffb3d60 0x40085157:0x3ffb3dd0 0x400d3d2f:0x3ffb3e00 0x400e6c99:0x3ffb3ea0 0x40085e1d:0x3ffb3ed0
+
+
+
+
+ELF file SHA256: 8a2c3ad80
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 01:54:31[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a40ch ( 41996) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a434 vaddr=3ffb0000 size=02300h (  8960) load[0m

@@ -1,0 +1,547 @@
+Command: /home/peky/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/peky/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/peky/repos/esp32_learning/wifi_scan_oled/build/wifi_scan_oled.elf /home/peky/repos/esp32_learning/wifi_scan_oled/build/bootloader/bootloader.elf -m '/home/peky/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/peky/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 14 2025 02:31:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1b73ch (112444) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0002b764 vaddr=3ffb0000 size=03f1ch ( 16156) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=0002f688 vaddr=40080000 size=00990h (  2448) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=8af48h (569160) map[0m
+[0;32mI (332) esp_image: segment 4: paddr=000baf70 vaddr=40080990 size=17808h ( 96264) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=000d2780 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (382) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (382) boot: Disabling RNG early entropy source...[0m
+[0;32mI (393) cpu_start: Multicore app[0m
+[0;32mI (401) cpu_start: Pro cpu start user code[0m
+[0;32mI (401) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (401) app_init: Application information:[0m
+[0;32mI (401) app_init: Project name:     wifi_scan_oled[0m
+[0;32mI (406) app_init: App version:      8f6dcd8-dirty[0m
+[0;32mI (410) app_init: Compile time:     Sep 14 2025 02:31:14[0m
+[0;32mI (415) app_init: ELF file SHA256:  ab7f01350...[0m
+[0;32mI (419) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (423) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (427) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (431) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (435) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (441) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (446) heap_init: At 3FFB8420 len 00027BE0 (158 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (457) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (462) heap_init: At 40098198 len 00007E68 (31 KiB): IRAM[0m
+[0;32mI (469) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (498) main_task: Calling app_main()[0m
+[0;32mI (518) wifi:wifi driver task: 3ffc0238, prio:23, stack:6656, core=0[0m
+[0;32mI (518) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (518) wifi:wifi certification version: v7.0[0m
+[0;32mI (518) wifi:config NVS flash: enabled[0m
+[0;32mI (518) wifi:config nano formatting: disabled[0m
+[0;32mI (528) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (528) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (538) wifi:Init management short buffer num: 32[0m
+[0;32mI (538) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (538) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (548) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (558) wifi_init: rx ba win: 6[0m
+[0;32mI (558) wifi_init: accept mbox: 6[0m
+[0;32mI (558) wifi_init: tcpip mbox: 32[0m
+[0;32mI (558) wifi_init: udp mbox: 6[0m
+[0;32mI (568) wifi_init: tcp mbox: 6[0m
+[0;32mI (568) wifi_init: tcp tx win: 5760[0m
+[0;32mI (568) wifi_init: tcp rx win: 5760[0m
+[0;32mI (578) wifi_init: tcp mss: 1440[0m
+[0;32mI (578) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (578) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (668) wifi:mode : sta (c0:5d:89:90:3e:c0)[0m
+[0;32mI (668) wifi:enable tsf[0m
+[0;32mI (4878) WIFI+OLED: Scan results (21):[0m
+[0;32mI (4878) WIFI+OLED:  -59 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (4878) WIFI+OLED:  -59 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (4878) WIFI+OLED:  -59 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (4878) WIFI+OLED:  -62 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (4888) WIFI+OLED:  -73 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (4888) WIFI+OLED:  -73 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (4898) WIFI+OLED:  -77 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (4898) WIFI+OLED:  -78 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (4908) WIFI+OLED:  -79 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (4908) WIFI+OLED:  -81 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (4918) WIFI+OLED:  -81 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (4918) WIFI+OLED:  -81 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (4928) WIFI+OLED:  -83 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (4928) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (4938) WIFI+OLED:  -87 dBm ch4   (2G)  JMei[0m
+[0;32mI (4938) WIFI+OLED:  -87 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (4938) WIFI+OLED:  -87 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (4948) WIFI+OLED:  -87 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (4948) WIFI+OLED:  -89 dBm ch1   (2G)  SINGTEL-F1B8[0m
+[0;32mI (4958) WIFI+OLED:  -89 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (4958) WIFI+OLED:  -91 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (17778) WIFI+OLED: Scan results (24):[0m
+[0;32mI (17778) WIFI+OLED:  -60 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (17778) WIFI+OLED:  -61 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (17778) WIFI+OLED:  -61 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (17778) WIFI+OLED:  -62 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (17788) WIFI+OLED:  -62 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (17788) WIFI+OLED:  -62 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (17798) WIFI+OLED:  -74 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (17798) WIFI+OLED:  -74 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (17808) WIFI+OLED:  -79 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (17808) WIFI+OLED:  -82 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (17818) WIFI+OLED:  -83 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (17818) WIFI+OLED:  -83 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (17828) WIFI+OLED:  -84 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (17828) WIFI+OLED:  -84 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (17838) WIFI+OLED:  -85 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (17838) WIFI+OLED:  -85 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (17848) WIFI+OLED:  -87 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (17848) WIFI+OLED:  -87 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (17858) WIFI+OLED:  -87 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (17858) WIFI+OLED:  -88 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (17868) WIFI+OLED:  -88 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (17868) WIFI+OLED:  -89 dBm ch5   (2G)  SINGTEL-TF4M[0m
+[0;32mI (17878) WIFI+OLED:  -90 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (17878) WIFI+OLED:  -91 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (26938) WIFI+OLED: Scan results (25):[0m
+[0;32mI (26938) WIFI+OLED:  -61 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (26938) WIFI+OLED:  -61 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (26938) WIFI+OLED:  -62 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (26938) WIFI+OLED:  -63 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (26948) WIFI+OLED:  -63 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (26948) WIFI+OLED:  -63 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (26958) WIFI+OLED:  -75 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (26958) WIFI+OLED:  -78 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (26968) WIFI+OLED:  -79 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (26968) WIFI+OLED:  -79 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (26978) WIFI+OLED:  -83 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (26978) WIFI+OLED:  -84 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (26988) WIFI+OLED:  -84 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (26988) WIFI+OLED:  -86 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (26998) WIFI+OLED:  -87 dBm ch5   (2G)  SINGTEL-TF4M[0m
+[0;32mI (26998) WIFI+OLED:  -87 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (27008) WIFI+OLED:  -87 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (27008) WIFI+OLED:  -88 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (27018) WIFI+OLED:  -88 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (27018) WIFI+OLED:  -89 dBm ch3   (2G)  asus ax[0m
+[0;32mI (27028) WIFI+OLED:  -89 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (27028) WIFI+OLED:  -90 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (27028) WIFI+OLED:  -91 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (27038) WIFI+OLED:  -91 dBm ch4   (2G)  JMei[0m
+[0;32mI (27038) WIFI+OLED:  -91 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (34918) WIFI+OLED: Scan results (22):[0m
+[0;32mI (34918) WIFI+OLED:  -56 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (34918) WIFI+OLED:  -57 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (34918) WIFI+OLED:  -57 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (34918) WIFI+OLED:  -63 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (34928) WIFI+OLED:  -64 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (34928) WIFI+OLED:  -65 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (34938) WIFI+OLED:  -78 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (34938) WIFI+OLED:  -78 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (34948) WIFI+OLED:  -79 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (34948) WIFI+OLED:  -80 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (34958) WIFI+OLED:  -80 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (34958) WIFI+OLED:  -81 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (34968) WIFI+OLED:  -81 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (34968) WIFI+OLED:  -82 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (34978) WIFI+OLED:  -86 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (34978) WIFI+OLED:  -87 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (34988) WIFI+OLED:  -88 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (34988) WIFI+OLED:  -89 dBm ch1   (2G)  <hidden>[0m
+[0;32mI (34998) WIFI+OLED:  -89 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (34998) WIFI+OLED:  -90 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (35008) WIFI+OLED:  -91 dBm ch1   (2G)  ALSWireless 2.4G[0m
+[0;32mI (35008) WIFI+OLED:  -92 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (43868) WIFI+OLED: Scan results (23):[0m
+[0;32mI (43868) WIFI+OLED:  -61 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (43868) WIFI+OLED:  -63 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (43868) WIFI+OLED:  -63 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (43868) WIFI+OLED:  -68 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (43878) WIFI+OLED:  -68 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (43878) WIFI+OLED:  -77 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (43888) WIFI+OLED:  -79 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (43888) WIFI+OLED:  -79 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (43898) WIFI+OLED:  -79 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (43898) WIFI+OLED:  -82 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (43908) WIFI+OLED:  -82 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (43908) WIFI+OLED:  -82 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (43918) WIFI+OLED:  -84 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (43918) WIFI+OLED:  -84 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (43928) WIFI+OLED:  -87 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (43928) WIFI+OLED:  -89 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (43938) WIFI+OLED:  -89 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (43938) WIFI+OLED:  -90 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (43948) WIFI+OLED:  -90 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (43948) WIFI+OLED:  -91 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (43958) WIFI+OLED:  -91 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (43958) WIFI+OLED:  -92 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (43968) WIFI+OLED:  -93 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (52828) WIFI+OLED: Scan results (21):[0m
+[0;32mI (52828) WIFI+OLED:  -67 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (52828) WIFI+OLED:  -68 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (52828) WIFI+OLED:  -68 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (52828) WIFI+OLED:  -69 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (52838) WIFI+OLED:  -69 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (52838) WIFI+OLED:  -75 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (52848) WIFI+OLED:  -78 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (52848) WIFI+OLED:  -82 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (52858) WIFI+OLED:  -83 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (52858) WIFI+OLED:  -83 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (52868) WIFI+OLED:  -84 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (52868) WIFI+OLED:  -87 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (52878) WIFI+OLED:  -88 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (52878) WIFI+OLED:  -89 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (52888) WIFI+OLED:  -89 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (52888) WIFI+OLED:  -90 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (52898) WIFI+OLED:  -90 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (52898) WIFI+OLED:  -91 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (52908) WIFI+OLED:  -92 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (52908) WIFI+OLED:  -92 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (52918) WIFI+OLED:  -92 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (61778) WIFI+OLED: Scan results (23):[0m
+[0;32mI (61778) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (61778) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (61778) WIFI+OLED:  -67 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (61778) WIFI+OLED:  -68 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (61788) WIFI+OLED:  -70 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (61788) WIFI+OLED:  -76 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (61798) WIFI+OLED:  -79 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (61798) WIFI+OLED:  -81 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (61808) WIFI+OLED:  -83 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (61808) WIFI+OLED:  -83 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (61818) WIFI+OLED:  -85 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (61818) WIFI+OLED:  -85 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (61828) WIFI+OLED:  -86 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (61828) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (61838) WIFI+OLED:  -87 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (61838) WIFI+OLED:  -87 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (61848) WIFI+OLED:  -88 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (61848) WIFI+OLED:  -88 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (61858) WIFI+OLED:  -90 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (61858) WIFI+OLED:  -91 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (61868) WIFI+OLED:  -92 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (61868) WIFI+OLED:  -92 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (61878) WIFI+OLED:  -92 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (70738) WIFI+OLED: Scan results (23):[0m
+[0;32mI (70738) WIFI+OLED:  -61 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (70738) WIFI+OLED:  -66 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (70738) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (70738) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (70748) WIFI+OLED:  -68 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (70748) WIFI+OLED:  -78 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (70758) WIFI+OLED:  -82 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (70758) WIFI+OLED:  -83 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (70768) WIFI+OLED:  -83 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (70768) WIFI+OLED:  -84 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (70778) WIFI+OLED:  -86 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (70778) WIFI+OLED:  -87 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (70788) WIFI+OLED:  -87 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (70788) WIFI+OLED:  -87 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (70798) WIFI+OLED:  -87 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (70798) WIFI+OLED:  -89 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (70808) WIFI+OLED:  -89 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (70808) WIFI+OLED:  -89 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (70818) WIFI+OLED:  -89 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (70818) WIFI+OLED:  -91 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (70828) WIFI+OLED:  -91 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (70828) WIFI+OLED:  -92 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (70828) WIFI+OLED:  -95 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (79898) WIFI+OLED: Scan results (22):[0m
+[0;32mI (79898) WIFI+OLED:  -66 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (79898) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (79898) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (79898) WIFI+OLED:  -68 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (79908) WIFI+OLED:  -69 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (79908) WIFI+OLED:  -76 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (79918) WIFI+OLED:  -80 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (79918) WIFI+OLED:  -83 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (79928) WIFI+OLED:  -83 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (79928) WIFI+OLED:  -83 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (79938) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (79938) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (79948) WIFI+OLED:  -86 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (79948) WIFI+OLED:  -87 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (79958) WIFI+OLED:  -87 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (79958) WIFI+OLED:  -87 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (79968) WIFI+OLED:  -88 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (79968) WIFI+OLED:  -89 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (79978) WIFI+OLED:  -89 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (79978) WIFI+OLED:  -91 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (79988) WIFI+OLED:  -91 dBm ch4   (2G)  JMei[0m
+[0;32mI (79988) WIFI+OLED:  -92 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (88058) WIFI+OLED: Scan results (23):[0m
+[0;32mI (88058) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (88058) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (88058) WIFI+OLED:  -66 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (88058) WIFI+OLED:  -66 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (88068) WIFI+OLED:  -68 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (88068) WIFI+OLED:  -73 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (88078) WIFI+OLED:  -81 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (88078) WIFI+OLED:  -82 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (88088) WIFI+OLED:  -82 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (88088) WIFI+OLED:  -83 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (88098) WIFI+OLED:  -85 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (88098) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (88108) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (88108) WIFI+OLED:  -87 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (88118) WIFI+OLED:  -87 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (88118) WIFI+OLED:  -88 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (88128) WIFI+OLED:  -89 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (88128) WIFI+OLED:  -89 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (88138) WIFI+OLED:  -91 dBm ch4   (2G)  JMei[0m
+[0;32mI (88138) WIFI+OLED:  -91 dBm ch6   (2G)  leefamily24[0m
+[0;32mI (88138) WIFI+OLED:  -92 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (88148) WIFI+OLED:  -92 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (88148) WIFI+OLED:  -93 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (96228) WIFI+OLED: Scan results (22):[0m
+[0;32mI (96228) WIFI+OLED:  -61 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (96228) WIFI+OLED:  -63 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (96228) WIFI+OLED:  -63 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (96228) WIFI+OLED:  -68 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (96238) WIFI+OLED:  -70 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (96238) WIFI+OLED:  -75 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (96248) WIFI+OLED:  -78 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (96248) WIFI+OLED:  -82 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (96258) WIFI+OLED:  -82 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (96258) WIFI+OLED:  -83 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (96268) WIFI+OLED:  -84 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (96268) WIFI+OLED:  -87 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (96278) WIFI+OLED:  -87 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (96278) WIFI+OLED:  -88 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (96288) WIFI+OLED:  -89 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (96288) WIFI+OLED:  -89 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (96298) WIFI+OLED:  -90 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (96298) WIFI+OLED:  -90 dBm ch1   (2G)  ALSWireless 2.4G[0m
+[0;32mI (96308) WIFI+OLED:  -91 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (96308) WIFI+OLED:  -91 dBm ch4   (2G)  JMei[0m
+[0;32mI (96318) WIFI+OLED:  -93 dBm ch1   (2G)  <hidden>[0m
+[0;32mI (96318) WIFI+OLED:  -94 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (104388) WIFI+OLED: Scan results (23):[0m
+[0;32mI (104388) WIFI+OLED:  -65 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (104388) WIFI+OLED:  -65 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (104388) WIFI+OLED:  -65 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (104388) WIFI+OLED:  -69 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (104398) WIFI+OLED:  -69 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (104398) WIFI+OLED:  -80 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (104408) WIFI+OLED:  -80 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (104408) WIFI+OLED:  -82 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (104418) WIFI+OLED:  -83 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (104418) WIFI+OLED:  -84 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (104428) WIFI+OLED:  -85 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (104428) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (104438) WIFI+OLED:  -87 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (104438) WIFI+OLED:  -88 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (104448) WIFI+OLED:  -90 dBm ch4   (2G)  JMei[0m
+[0;32mI (104448) WIFI+OLED:  -90 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (104458) WIFI+OLED:  -92 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (104458) WIFI+OLED:  -93 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (104468) WIFI+OLED:  -93 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (104468) WIFI+OLED:  -93 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (104478) WIFI+OLED:  -93 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (104478) WIFI+OLED:  -93 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (104488) WIFI+OLED:  -94 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (112558) WIFI+OLED: Scan results (21):[0m
+[0;32mI (112558) WIFI+OLED:  -65 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (112558) WIFI+OLED:  -66 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (112558) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (112558) WIFI+OLED:  -69 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (112568) WIFI+OLED:  -69 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (112568) WIFI+OLED:  -80 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (112578) WIFI+OLED:  -80 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (112578) WIFI+OLED:  -81 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (112588) WIFI+OLED:  -84 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (112588) WIFI+OLED:  -84 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (112598) WIFI+OLED:  -86 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (112598) WIFI+OLED:  -88 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (112608) WIFI+OLED:  -92 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (112608) WIFI+OLED:  -93 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (112618) WIFI+OLED:  -93 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (112618) WIFI+OLED:  -94 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (112628) WIFI+OLED:  -94 dBm ch4   (2G)  JMei[0m
+[0;32mI (112628) WIFI+OLED:  -94 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (112638) WIFI+OLED:  -94 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (112638) WIFI+OLED:  -95 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (112648) WIFI+OLED:  -95 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (120518) WIFI+OLED: Scan results (22):[0m
+[0;32mI (120518) WIFI+OLED:  -65 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (120518) WIFI+OLED:  -65 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (120518) WIFI+OLED:  -65 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (120518) WIFI+OLED:  -70 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (120528) WIFI+OLED:  -71 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (120528) WIFI+OLED:  -79 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (120538) WIFI+OLED:  -81 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (120538) WIFI+OLED:  -82 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (120548) WIFI+OLED:  -83 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (120548) WIFI+OLED:  -83 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (120558) WIFI+OLED:  -84 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (120558) WIFI+OLED:  -85 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (120568) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (120568) WIFI+OLED:  -87 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (120578) WIFI+OLED:  -90 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (120578) WIFI+OLED:  -91 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (120588) WIFI+OLED:  -91 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (120588) WIFI+OLED:  -92 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (120598) WIFI+OLED:  -93 dBm ch3   (2G)  asus ax[0m
+[0;32mI (120598) WIFI+OLED:  -93 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (120608) WIFI+OLED:  -93 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (120608) WIFI+OLED:  -94 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (129668) WIFI+OLED: Scan results (24):[0m
+[0;32mI (129668) WIFI+OLED:  -64 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (129668) WIFI+OLED:  -64 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (129668) WIFI+OLED:  -64 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (129668) WIFI+OLED:  -70 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (129678) WIFI+OLED:  -70 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (129678) WIFI+OLED:  -71 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (129688) WIFI+OLED:  -82 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (129688) WIFI+OLED:  -83 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (129698) WIFI+OLED:  -84 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (129698) WIFI+OLED:  -85 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (129708) WIFI+OLED:  -85 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (129708) WIFI+OLED:  -85 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (129718) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (129718) WIFI+OLED:  -89 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (129728) WIFI+OLED:  -90 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (129728) WIFI+OLED:  -91 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (129738) WIFI+OLED:  -91 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (129738) WIFI+OLED:  -91 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (129748) WIFI+OLED:  -91 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (129748) WIFI+OLED:  -91 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (129758) WIFI+OLED:  -92 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (129758) WIFI+OLED:  -93 dBm ch4   (2G)  JMei[0m
+[0;32mI (129768) WIFI+OLED:  -93 dBm ch6   (2G)  PhoonFamily(2.4G)[0m
+[0;32mI (129768) WIFI+OLED:  -94 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (137638) WIFI+OLED: Scan results (20):[0m
+[0;32mI (137638) WIFI+OLED:  -68 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (137638) WIFI+OLED:  -68 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (137638) WIFI+OLED:  -68 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (137638) WIFI+OLED:  -68 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (137648) WIFI+OLED:  -70 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (137648) WIFI+OLED:  -73 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (137658) WIFI+OLED:  -82 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (137658) WIFI+OLED:  -82 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (137668) WIFI+OLED:  -84 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (137668) WIFI+OLED:  -84 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (137678) WIFI+OLED:  -84 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (137678) WIFI+OLED:  -85 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (137688) WIFI+OLED:  -85 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (137688) WIFI+OLED:  -89 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (137698) WIFI+OLED:  -91 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (137698) WIFI+OLED:  -91 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (137708) WIFI+OLED:  -91 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (137708) WIFI+OLED:  -93 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (137718) WIFI+OLED:  -93 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (137718) WIFI+OLED:  -96 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (146578) WIFI+OLED: Scan results (20):[0m
+[0;32mI (146578) WIFI+OLED:  -64 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (146578) WIFI+OLED:  -68 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (146578) WIFI+OLED:  -68 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (146578) WIFI+OLED:  -69 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (146588) WIFI+OLED:  -71 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (146588) WIFI+OLED:  -72 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (146598) WIFI+OLED:  -84 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (146598) WIFI+OLED:  -84 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (146608) WIFI+OLED:  -84 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (146608) WIFI+OLED:  -84 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (146618) WIFI+OLED:  -85 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (146618) WIFI+OLED:  -85 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (146628) WIFI+OLED:  -86 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (146628) WIFI+OLED:  -88 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (146638) WIFI+OLED:  -90 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (146638) WIFI+OLED:  -90 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (146648) WIFI+OLED:  -91 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (146648) WIFI+OLED:  -91 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (146658) WIFI+OLED:  -91 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (146658) WIFI+OLED:  -91 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (155518) WIFI+OLED: Scan results (20):[0m
+[0;32mI (155518) WIFI+OLED:  -68 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (155518) WIFI+OLED:  -68 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (155518) WIFI+OLED:  -69 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (155518) WIFI+OLED:  -69 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (155528) WIFI+OLED:  -69 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (155528) WIFI+OLED:  -70 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (155538) WIFI+OLED:  -84 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (155538) WIFI+OLED:  -84 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (155548) WIFI+OLED:  -85 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (155548) WIFI+OLED:  -85 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (155558) WIFI+OLED:  -85 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (155558) WIFI+OLED:  -86 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (155568) WIFI+OLED:  -88 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (155568) WIFI+OLED:  -90 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (155578) WIFI+OLED:  -90 dBm ch10  (2G)  ChanFamilyL1[0m
+[0;32mI (155578) WIFI+OLED:  -90 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (155588) WIFI+OLED:  -90 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (155588) WIFI+OLED:  -91 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (155598) WIFI+OLED:  -91 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (155598) WIFI+OLED:  -93 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (164658) WIFI+OLED: Scan results (23):[0m
+[0;32mI (164658) WIFI+OLED:  -61 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (164658) WIFI+OLED:  -66 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (164658) WIFI+OLED:  -66 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (164658) WIFI+OLED:  -68 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (164668) WIFI+OLED:  -68 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (164668) WIFI+OLED:  -78 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (164678) WIFI+OLED:  -82 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (164678) WIFI+OLED:  -82 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (164688) WIFI+OLED:  -83 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (164688) WIFI+OLED:  -86 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (164698) WIFI+OLED:  -86 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (164698) WIFI+OLED:  -87 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (164708) WIFI+OLED:  -87 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (164708) WIFI+OLED:  -87 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (164718) WIFI+OLED:  -88 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (164718) WIFI+OLED:  -89 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (164728) WIFI+OLED:  -89 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (164728) WIFI+OLED:  -90 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (164738) WIFI+OLED:  -90 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (164738) WIFI+OLED:  -91 dBm ch2   (2G)  32B Wi-Fi[0m
+[0;32mI (164748) WIFI+OLED:  -91 dBm ch4   (2G)  <hidden>[0m
+[0;32mI (164748) WIFI+OLED:  -92 dBm ch5   (2G)  SINGTEL-TF4M[0m
+[0;32mI (164758) WIFI+OLED:  -95 dBm ch4   (2G)  JMei[0m
+[0;32mI (172628) WIFI+OLED: Scan results (21):[0m
+[0;32mI (172628) WIFI+OLED:  -66 dBm ch2   (2G)  SINGTEL-CBA0[0m
+[0;32mI (172628) WIFI+OLED:  -67 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (172628) WIFI+OLED:  -67 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (172628) WIFI+OLED:  -67 dBm ch10  (2G)  3rd_floor_wifi[0m
+[0;32mI (172638) WIFI+OLED:  -67 dBm ch10  (2G)  <hidden>[0m
+[0;32mI (172638) WIFI+OLED:  -77 dBm ch13  (2G)  Pek_2_floor_wifi[0m
+[0;32mI (172648) WIFI+OLED:  -83 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (172648) WIFI+OLED:  -84 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (172658) WIFI+OLED:  -84 dBm ch6   (2G)  3rd_floor_wifi[0m
+[0;32mI (172658) WIFI+OLED:  -84 dBm ch6   (2G)  <hidden>[0m
+[0;32mI (172668) WIFI+OLED:  -85 dBm ch3   (2G)  DaikinAP02692[0m
+[0;32mI (172668) WIFI+OLED:  -85 dBm ch11  (2G)  S&T-ST MICHAEL[0m
+[0;32mI (172678) WIFI+OLED:  -87 dBm ch8   (2G)  leefamily24[0m
+[0;32mI (172678) WIFI+OLED:  -89 dBm ch8   (2G)  <hidden>[0m
+[0;32mI (172688) WIFI+OLED:  -89 dBm ch8   (2G)  DaikinAP71439[0m
+[0;32mI (172688) WIFI+OLED:  -91 dBm ch9   (2G)  <hidden>[0m
+[0;32mI (172698) WIFI+OLED:  -91 dBm ch9   (2G)  3rd_floor_wifi[0m
+[0;32mI (172698) WIFI+OLED:  -92 dBm ch5   (2G)  SINGTEL-23XX[0m
+[0;32mI (172708) WIFI+OLED:  -93 dBm ch2   (2G)  <hidden>[0m
+[0;32mI (172708) WIFI+OLED:  -93 dBm ch3   (2G)  DaikinAP98103[0m
+[0;32mI (172718) WIFI+OLED:  -94 dBm ch2   (2G)  32B Wi-Fi[0m

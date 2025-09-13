@@ -1,0 +1,23 @@
+Command: ninja all
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/i2c_oled_example_main.c.obj
+/home/peky/repos/esp32_learning/i2c_oled/main/i2c_oled_example_main.c: In function 'app_main':
+/home/peky/repos/esp32_learning/i2c_oled/main/i2c_oled_example_main.c:71:26: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   71 |         .vendor_config = &ssd1306_cfg,
+      |                          ^
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/peky/repos/esp32_learning/i2c_oled/build/bootloader/esp-idf/esptool_py && /home/peky/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/peky/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/peky/repos/esp32_learning/i2c_oled/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[3/10] No install step for 'bootloader'
+[4/10] Linking C static library esp-idf/main/libmain.a
+[5/10] Completed 'bootloader'
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Building C object CMakeFiles/i2c_oled.elf.dir/project_elf_src_esp32.c.obj
+[8/10] Linking CXX executable i2c_oled.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.10.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/peky/repos/esp32_learning/i2c_oled/build/i2c_oled.bin
+[10/10] cd /home/peky/repos/esp32_learning/i2c_oled/build/esp-idf/esptool_py && /home/peky/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/peky/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/peky/repos/esp32_learning/i2c_oled/build/partition_table/partition-table.bin /home/peky/repos/esp32_learning/i2c_oled/build/i2c_oled.bin
+i2c_oled.bin binary size 0x316d0 bytes. Smallest app partition is 0x100000 bytes. 0xce930 bytes (81%) free.

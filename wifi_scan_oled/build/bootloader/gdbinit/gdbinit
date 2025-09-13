@@ -1,0 +1,2 @@
+source /home/peky/repos/esp32_learning/wifi_scan_oled/build/bootloader/gdbinit/symbols
+source /home/peky/repos/esp32_learning/wifi_scan_oled/build/bootloader/gdbinit/connect
