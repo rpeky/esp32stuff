@@ -1,0 +1,2 @@
+source /home/peky/repos/esp32_learning/blink/build/bootloader/gdbinit/symbols
+source /home/peky/repos/esp32_learning/blink/build/bootloader/gdbinit/connect
