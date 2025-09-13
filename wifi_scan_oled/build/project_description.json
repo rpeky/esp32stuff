@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "wifi_scan_oled",
-    "project_version":    "8f6dcd8-dirty",
+    "project_version":    "84b8b98-dirty",
     "project_path":       "/home/peky/repos/esp32_learning/wifi_scan_oled",
     "idf_path":           "/home/peky/esp/esp-idf",
     "build_dir":          "/home/peky/repos/esp32_learning/wifi_scan_oled/build",
