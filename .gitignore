@@ -1,0 +1,50 @@
+# --- ESP-IDF / CMake build output
+build/
+**/build/
+
+# IDF component manager cache (recreated from idf_component.yml + dependencies.lock)
+managed_components/
+**/managed_components/
+
+# Local sdkconfig (keep sdkconfig.defaults in git)
+sdkconfig
+sdkconfig.old
+**/sdkconfig
+**/sdkconfig.old
+
+# Compiled artifacts (in case any escape the build dir)
+*.bin
+*.elf
+*.map
+*.hex
+*.ld
+
+# C/C++ intermediates (belt-and-suspenders)
+*.o
+*.obj
+*.a
+*.d
+
+# Compiler DB
+compile_commands.json
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Editors / IDEs
+.vscode/
+!.vscode/extensions.json
+!.vscode/recommended.code-snippets
+.idea/
+*.swp
+*.swo
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db
+
